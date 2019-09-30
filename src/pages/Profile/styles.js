@@ -49,20 +49,19 @@ export const Container = styled.div`
       }
     }
   }
-  >button {
-      width:100%;
-      margin: 10px 0 0;
-      height: 44px;
-      background: #F64C75;
-      font-weight: bold;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      font-size: 16px;
-      transition: background 0.2s;
-      &:hover {
-        background: ${darken(0.08, '#F64C75')};
-      }
+  > button {
+    width: 100%;
+    margin: 10px 0 0;
+    height: 44px;
+    background: #f64c75;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.2s;
+    &:hover {
+      background: ${darken(0.08, '#F64C75')};
     }
   }
 `;
