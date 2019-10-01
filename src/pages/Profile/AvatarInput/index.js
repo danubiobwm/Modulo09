@@ -1,13 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useRef, useEffect} from 'react';
 import {useField} from '@rocketseat/unform';
+import api from '~/services/api';
 
 import {Container} from './styles';
-import api from '~/services/api';
 
 export default function AvatarInput() {
   const {defaultValue, registerField} = useField('avatar');
 
   const [file, setFile] = useState(defaultValue && defaultValue.id);
+
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
 
   const ref = useRef();
@@ -20,10 +22,11 @@ export default function AvatarInput() {
         path: 'dataset.file',
       });
     }
-  }, [ref, registerField]);
+  }, [ref]);
 
   async function handleChange(e) {
     const data = new FormData();
+
     data.append('file', e.target.files[0]);
 
     const response = await api.post('files', data);
@@ -33,7 +36,6 @@ export default function AvatarInput() {
     setFile(id);
     setPreview(url);
   }
-
   return (
     <Container>
       <label htmlFor="avatar">
@@ -42,7 +44,7 @@ export default function AvatarInput() {
             preview ||
             'https://api.adorable.io/avatars/50/abott@adorable.pngCop'
           }
-          alt=""
+          alt="profile"
         />
         <input
           type="file"
