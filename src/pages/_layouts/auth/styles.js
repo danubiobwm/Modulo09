@@ -27,6 +27,7 @@ export const Content = styled.div`
       padding: 0 15px;
       color: #fff;
       margin: 0 0 10px;
+
       &::placeholder {
         color: rgba(255, 255, 255, 0.7);
       }
@@ -56,6 +57,7 @@ export const Content = styled.div`
       margin-top: 15px;
       font-size: 16px;
       opacity: 0.8;
+
       &:hover {
         opacity: 1;
       }
