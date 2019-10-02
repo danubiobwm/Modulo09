@@ -18,10 +18,12 @@ export const Container = styled.div`
       padding: 0 15px;
       color: #fff;
       margin: 0 0 10px;
+
       &::placeholder {
         color: rgba(255, 255, 255, 0.7);
       }
     }
+
     span {
       color: #fb6f91;
       align-self: flex-start;
@@ -49,7 +51,19 @@ export const Container = styled.div`
         background: ${darken(0.03, '#3b9eff')};
       }
     }
+
+    a {
+      color: #fff;
+      margin-top: 15px;
+      font-size: 16px;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
+
   > button {
     width: 100%;
     margin: 10px 0 0;
@@ -61,6 +75,7 @@ export const Container = styled.div`
     border-radius: 4px;
     font-size: 16px;
     transition: background 0.2s;
+
     &:hover {
       background: ${darken(0.08, '#F64C75')};
     }

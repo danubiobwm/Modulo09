@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 64px;
   background: #fff;
   padding: 0 30px;
 `;
@@ -43,6 +42,7 @@ export const Profile = styled.div`
   div {
     text-align: right;
     margin-right: 10px;
+
     strong {
       display: block;
       color: #333;
@@ -57,6 +57,6 @@ export const Profile = styled.div`
   img {
     width: 35px;
     height: 35px;
-    border-radius: 50px;
+    border-radius: 50%;
   }
 `;
