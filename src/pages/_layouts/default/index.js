@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import Heander from '~/components/Header';
 
-import {Wrapper, Container} from './styles';
+import { Wrapper, Container } from './styles';
 
-export default function DefaultLayout({children}) {
+export default function DefaultLayout({ children }) {
   return (
     <Wrapper>
       <Heander />

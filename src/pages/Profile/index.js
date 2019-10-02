@@ -1,13 +1,13 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {Form, Input} from '@rocketseat/unform';
+import { useDispatch, useSelector } from 'react-redux';
+import { Form, Input } from '@rocketseat/unform';
 
-import {signOut} from '~/store/module/auth/actions';
-import {updateProfileRequest} from '~/store/module/user/actions';
+import { signOut } from '~/store/module/auth/actions';
+import { updateProfileRequest } from '~/store/module/user/actions';
 
 import AvatarInput from './AvatarInput';
 
-import {Container} from './styles';
+import { Container } from './styles';
 
 export default function Profile() {
   const dispatch = useDispatch();
