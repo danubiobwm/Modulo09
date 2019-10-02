@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useState, useRef, useEffect} from 'react';
-import {useField} from '@rocketseat/unform';
+import React, { useState, useRef, useEffect } from 'react';
+import { useField } from '@rocketseat/unform';
 import api from '~/services/api';
 
-import {Container} from './styles';
+import { Container } from './styles';
 
 export default function AvatarInput() {
-  const {defaultValue, registerField} = useField('avatar');
+  const { defaultValue, registerField } = useField('avatar');
 
   const [file, setFile] = useState(defaultValue && defaultValue.id);
 
@@ -31,7 +31,7 @@ export default function AvatarInput() {
 
     const response = await api.post('files', data);
 
-    const {id, url} = response.data;
+    const { id, url } = response.data;
 
     setFile(id);
     setPreview(url);

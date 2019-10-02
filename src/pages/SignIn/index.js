@@ -1,10 +1,10 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {Link} from 'react-router-dom';
-import {Form, Input} from '@rocketseat/unform';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
-import {signInRequest} from '~/store/module/auth/actions';
+import { signInRequest } from '~/store/module/auth/actions';
 
 import logo from '~/assets/logo.svg';
 
@@ -19,7 +19,7 @@ export default function SignIn() {
   const dispatch = useDispatch();
   const loading = useSelector(state => state.auth.loading);
 
-  function handleSubmit({email, password}) {
+  function handleSubmit({ email, password }) {
     dispatch(signInRequest(email, password));
   }
 
